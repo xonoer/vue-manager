@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
 // 懒加载模式，this generates a separate chunk (about.[hash].js) for this route
-const page = name => () => import("./views/" + name);
+const page = name => () => import("../views/" + name);
 
 Vue.use(VueRouter);
 

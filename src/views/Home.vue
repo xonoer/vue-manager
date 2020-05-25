@@ -1,28 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <k-ckeditor
+      id="editor"
+      v-model="data"
+    ></k-ckeditor>
     <div></div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+
+import KCkeditor from '@/components/ckeditor/KCkeditor.vue'
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    HelloWorld
+    KCkeditor
   },
-  mounted: function() {
-    this.getData();
+  data: function () {
+    return {
+      data: '测试的时候'
+    }
+  },
+  mounted: function () {
+    this.getData()
   },
   methods: {
-    getData() {
-      return "123";
+    getData () {
+      return '123'
     }
   }
-};
+}
 </script>
 <style scoped></style>
